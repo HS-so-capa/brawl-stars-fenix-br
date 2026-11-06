@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawl Stars HQ - O Hub Oficial de Brawlers</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Lilita One (Brawl Style) & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lilita+One&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brawlYellow: '#FFD200',
+                        brawlYellowDark: '#E5BD00',
+                        brawlBlue: '#0055FF',
+                        brawlBlueDark: '#0039B3',
+                        brawlNavy: '#0F172A',
+                        brawlPurple: '#8B5CF6',
+                        brawlPink: '#EC4899',
+                        brawlOrange: '#FF5500',
+                    },
+                    fontFamily: {
+                        brawl: ['"Lilita One"', 'cursive', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'comic': '4px 4px 0px #000000',
+                        'comic-lg': '6px 6px 0px #000000',
+                        'comic-xl': '8px 8px 0px #000000',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .stroke-black {
+            -webkit-text-stroke: 2px black;
+        }
+        .stroke-black-lg {
+            -webkit-text-stroke: 3px black;
+        }
+        .comic-border {
+            border: 4px solid black;
+        }
+        .comic-border-2 {
+            border: 2px solid black;
+        }
+        /* Gradient Background Patterns */
+        .bg-brawl-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e293b 2px, transparent 2px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-brawlNavy text-white font-sans antialiased bg-brawl-pattern min-h-screen selection:bg-brawlYellow selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-brawlNavy/95 border-b-4 border-black backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group transform hover:scale-105 transition-transform">
+                <div class="w-12 h-12 bg-brawlYellow rounded-2xl comic-border flex items-center justify-center shadow-comic">
+                    <i class="fa-solid fa-crown text-2xl text-black rotate-[-12deg]"></i>
+                </div>
+                <span class="font-brawl text-2xl md:text-3xl text-brawlYellow tracking-wider stroke-black drop-shadow-[0_4px_0_#000]">
+                    BRAWL HQ
+                </span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-6 font-brawl text-lg tracking-wide">
+                <a href="#hero" class="hover:text-brawlYellow transition-colors stroke-black">INÍCIO</a>
+                <a href="#brawlers" class="hover:text-brawlYellow transition-colors stroke-black">BRAWLERS</a>
+                <a href="#modes" class="hover:text-brawlYellow transition-colors stroke-black">MODOS DE JOGO</a>
+                <a href="#season" class="hover:text-brawlYellow transition-colors stroke-black">BRAWL PASS</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="flex items-center gap-4">
+                <a href="#brawlers" class="bg-brawlYellow hover:bg-brawlYellowDark text-black font-brawl text-lg px-6 py-2.5 rounded-xl comic-border shadow-comic hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                    JOGAR AGORA
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative overflow-hidden py-16 md:py-24 border-b-4 border-black bg-gradient-to-b from-indigo-900/50 to-brawlNavy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="space-y-6 text-center md:text-left">
+                    <div class="inline-block bg-brawlOrange text-white font-brawl px-4 py-1.5 rounded-full comic-border shadow-comic text-sm uppercase tracking-wider animate-bounce">
+                        🔥 Nova Temporada Disponível!
+                    </div>
+                    <h1 class="font-brawl text-5xl sm:text-6xl lg:text-7xl text-brawlYellow leading-none tracking-wide stroke-black-lg drop-shadow-[0_6px_0_#000]">
+                        DOMINE A arena BRAWL!
+                    </h1>
+                    <p class="text-gray-300 text-lg md:text-xl font-semibold max-w-xl">
+                        Explore todos os Brawlers, conheça os modos de jogo, estratégias de combate e torne-se uma lenda nos campos de batalha multiplayer!
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                        <a href="#brawlers" class="w-full sm:w-auto bg-brawlBlue hover:bg-brawlBlueDark text-white font-brawl text-xl px-8 py-4 rounded-2xl comic-border shadow-comic-lg hover:translate-x-1 hover:translate-y-1 transition-all text-center">
+                            <i class="fa-solid fa-gamepad mr-2"></i> VER BRAWLERS
+                        </a>
+                        <a href="#modes" class="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white font-brawl text-xl px-8 py-4 rounded-2xl comic-border shadow-comic-lg hover:translate-x-1 hover:translate-y-1 transition-all text-center">
+                            <i class="fa-solid fa-trophy mr-2"></i> MODOS DE JOGO
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 max-w-md mx-auto md:mx-0">
+                        <div class="bg-slate-800/80 p-3 rounded-xl comic-border text-center">
+                            <div class="font-brawl text-2xl text-brawlYellow">70+</div>
+                            <div class="text-xs font-bold text-gray-400 uppercase">Brawlers</div>
+                        </div>
+                        <div class="bg-slate-800/80 p-3 rounded-xl comic-border text-center">
+                            <div class="font-brawl text-2xl text-brawlPink">6+</div>
+                            <div class="text-xs font-bold text-gray-400 uppercase">Modos</div>
+                        </div>
+                        <div class="bg-slate-800/80 p-3 rounded-xl comic-border text-center">
+                            <div class="font-brawl text-2xl text-brawlOrange">3v3</div>
+                            <div class="text-xs font-bold text-gray-400 uppercase">Ação Rápida</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Artwork Banner -->
+                <div class="relative flex justify-center">
+                    <div class="relative w-full max-w-md aspect-square rounded-3xl bg-gradient-to-tr from-brawlYellow via-brawlOrange to-brawlPink p-4 comic-border shadow-comic-xl transform rotate-2 hover:rotate-0 transition-transform">
+                        <div class="w-full h-full bg-slate-900 rounded-2xl comic-border overflow-hidden relative flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Brawl Stars Battle" 
+                                 class="w-full h-full object-cover opacity-80 hover:scale-110 transition-transform duration-500">
+                            
+                            <!-- Floating Badge -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-brawlNavy/90 backdrop-blur-md p-4 rounded-xl comic-border">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-brawlYellow rounded-full flex items-center justify-center font-brawl text-black text-xl comic-border">
+                                            ⚡
+                                        </div>
+                                        <div>
+                                            <h4 class="font-brawl text-white text-lg leading-tight">CAMPEONATO MUNDIAL</h4>
+                                            <p class="text-xs text-brawlYellow font-semibold">Suba nos Rankings!</p>
+                                        </div>
+                                    </div>
+                                    <span class="bg-red-500 text-white font-brawl text-xs px-2.5 py-1 rounded-lg comic-border">AO VIVO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Filterable Brawlers Section -->
+    <section id="brawlers" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="font-brawl text-4xl sm:text-5xl text-brawlYellow stroke-black drop-shadow-[0_4px_0_#000] mb-3">
+                GALERIA DE BRAWLERS
+            </h2>
+            <p class="text-gray-300 font-semibold max-w-xl mx-auto">
+                Filtre por raridade e descubra o Brawler perfeito para o seu estilo de jogo.
+            </p>
+
+            <!-- Rarity Filters -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mt-8" id="filter-buttons">
+                <button data-filter="all" class="filter-btn active bg-brawlYellow text-black font-brawl px-5 py-2 rounded-xl comic-border shadow-comic text-sm sm:text-base transition-all">
+                    TODOS
+                </button>
+                <button data-filter="Raro" class="filter-btn bg-green-500 hover:bg-green-600 text-white font-brawl px-5 py-2 rounded-xl comic-border shadow-comic text-sm sm:text-base transition-all">
+                    RARO
+                </button>
+                <button data-filter="Super Raro" class="filter-btn bg-blue-500 hover:bg-blue-600 text-white font-brawl px-5 py-2 rounded-xl comic-border shadow-comic text-sm sm:text-base transition-all">
+                    SUPER RARO
+                </button>
+                <button data-filter="Épico" class="filter-btn bg-purple-600 hover:bg-purple-700 text-white font-brawl px-5 py-2 rounded-xl comic-border shadow-comic text-sm sm:text-base transition-all">
+                    ÉPICO
+                </button>
+                <button data-filter="Mítico" class="filter-btn bg-red-500 hover:bg-red-600 text-white font-brawl px-5 py-2 rounded-xl comic-border shadow-comic text-sm sm:text-base transition-all">
+                    MÍTICO
+                </button>
+                <button data-filter="Lendário" class="filter-btn bg-yellow-400 hover:bg-yellow-500 text-black font-brawl px-5 py-2 rounded-xl comic-border shadow-comic text-sm sm:text-base transition-all">
+                    LENDÁRIO
+                </button>
+            </div>
+        </div>
+
+        <!-- Brawlers Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="brawlers-grid">
+            <!-- Dynamic Content loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Game Modes Section -->
+    <section id="modes" class="py-16 bg-slate-900/90 border-y-4 border-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-brawl text-4xl sm:text-5xl text-brawlPink stroke-black drop-shadow-[0_4px_0_#000] mb-3">
+                    MODOS DE JOGO
+                </h2>
+                <p class="text-gray-300 font-semibold max-w-xl mx-auto">
+                    Escolha seu evento favorito e lute sozinho ou com amigos!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Mode 1: Gem Grab -->
+                <div class="bg-purple-900/40 p-6 rounded-2xl comic-border shadow-comic hover:translate-y-[-4px] transition-transform">
+                    <div class="w-16 h-16 bg-purple-600 rounded-2xl comic-border flex items-center justify-center text-3xl mb-4 text-white shadow-comic">
+                        💎
+                    </div>
+                    <h3 class="font-brawl text-2xl text-purple-300 mb-2">PIKOU-GEMAS</h3>
+                    <p class="text-sm text-gray-300 font-medium leading-relaxed">
+                        Forme equipe 3v3 e junte 10 gemas. Mantenha as gemas até a contagem regressiva acabar para vencer a partida!
+                    </p>
+                </div>
+
+                <!-- Mode 2: Showdown -->
+                <div class="bg-emerald-900/40 p-6 rounded-2xl comic-border shadow-comic hover:translate-y-[-4px] transition-transform">
+                    <div class="w-16 h-16 bg-emerald-600 rounded-2xl comic-border flex items-center justify-center text-3xl mb-4 text-white shadow-comic">
+                        💀
+                    </div>
+                    <h3 class="font-brawl text-2xl text-emerald-300 mb-2">COMBATE</h3>
+                    <p class="text-sm text-gray-300 font-medium leading-relaxed">
+                        Modo Battle Royale solo ou em dupla. Seja o último Brawler vivo na arena enquanto a fumaça tóxica fecha!
+                    </p>
+                </div>
+
+                <!-- Mode 3: Brawl Ball -->
+                <div class="bg-blue-900/40 p-6 rounded-2xl comic-border shadow-comic hover:translate-y-[-4px] transition-transform">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl comic-border flex items-center justify-center text-3xl mb-4 text-white shadow-comic">
+                        ⚽
+                    </div>
+                    <h3 class="font-brawl text-2xl text-blue-300 mb-2">FUT-BRAWL</h3>
+                    <p class="text-sm text-gray-300 font-medium leading-relaxed">
+                        Mostre suas habilidades com a bola! Marque 2 gols no gol adversário antes do time inimigo para levar a vitória.
+                    </p>
+                </div>
+
+                <!-- Mode 4: Bounty -->
+                <div class="bg-amber-900/40 p-6 rounded-2xl comic-border shadow-comic hover:translate-y-[-4px] transition-transform">
+                    <div class="w-16 h-16 bg-amber-600 rounded-2xl comic-border flex items-center justify-center text-3xl mb-4 text-white shadow-comic">
+                        ⭐
+                    </div>
+                    <h3 class="font-brawl text-2xl text-amber-300 mb-2">CAÇA-ESTRELAS</h3>
+                    <p class="text-sm text-gray-300 font-medium leading-relaxed">
+                        Elimine adversários para ganhar estrelas para seu time. O time com mais estrelas ao final do tempo ganha!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brawl Pass & Season Section -->
+    <section id="season" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-brawlOrange via-brawlPink to-brawlPurple p-8 sm:p-12 rounded-3xl comic-border shadow-comic-xl relative overflow-hidden">
+            <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <span class="bg-brawlYellow text-black font-brawl px-4 py-1.5 rounded-xl comic-border text-sm inline-block">
+                        NOVA TEMPORADA
+                    </span>
+                    <h2 class="font-brawl text-4xl sm:text-5xl text-white stroke-black drop-shadow-[0_4px_0_#000]">
+                        BRAWL PASS & RECOMPENSAS
+                    </h2>
+                    <p class="text-white font-semibold text-lg leading-relaxed">
+                        Desbloqueie visuais exclusivos, gemas, caixas e o novíssimo Brawler Cromático ao avançar nos patamares desta temporada!
+                    </p>
+                    <div class="pt-2">
+                        <button onclick="openPassModal()" class="bg-brawlYellow hover:bg-brawlYellowDark text-black font-brawl text-xl px-8 py-3.5 rounded-2xl comic-border shadow-comic hover:translate-x-1 hover:translate-y-1 transition-all">
+                            SAIBA MAIS
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=700&q=80" 
+                         alt="Brawl Pass Rewards" 
+                         class="rounded-2xl comic-border shadow-comic-lg max-w-xs sm:max-w-sm transform hover:scale-105 transition-transform">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t-4 border-black py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-10 h-10 bg-brawlYellow rounded-xl comic-border flex items-center justify-center font-brawl text-black">
+                    ⚡
+                </div>
+                <span class="font-brawl text-2xl text-brawlYellow">BRAWL STARS HQ</span>
+            </div>
+            <p class="text-sm text-gray-400 font-semibold max-w-md mx-auto">
+                Este site é uma demonstração de fã sem afiliação direta oficial com a Supercell. Todos os direitos de Brawl Stars pertencem à Supercell.
+            </p>
+            <div class="flex justify-center space-x-6 pt-2">
+                <a href="#" class="text-gray-400 hover:text-brawlYellow text-2xl transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="text-gray-400 hover:text-brawlYellow text-2xl transition-colors"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="text-gray-400 hover:text-brawlYellow text-2xl transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-brawlYellow text-2xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Info -->
+    <div id="info-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-brawlNavy border-4 border-black rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-comic-xl relative">
+            <button onclick="closePassModal()" class="absolute top-4 right-4 bg-red-500 text-white font-brawl w-10 h-10 rounded-xl comic-border flex items-center justify-center hover:bg-red-600">
+                ✕
+            </button>
+            <h3 class="font-brawl text-3xl text-brawlYellow stroke-black mb-4" id="modal-title">DETALHES DO BRAWL PASS</h3>
+            <p class="text-gray-300 font-medium mb-6 leading-relaxed" id="modal-content">
+                Avance nos níveis cumprindo missões diárias e sazonais. O passe inclui skins exclusivas, Reações (Pins), Moedas, Pontos de Poder e Gemas!
+            </p>
+            <button onclick="closePassModal()" class="w-full bg-brawlYellow text-black font-brawl text-lg py-3 rounded-xl comic-border shadow-comic">
+                ENTENDIDO!
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Data & Logic -->
+    <script>
+        // Brawler Data Array
+        const brawlers = [
+            {
+                name: "Shelly",
+                rarity: "Raro",
+                rarityClass: "bg-green-500",
+                class: "Destruidora",
+                hp: "3800",
+                damage: "2100",
+                speed: "Normal",
+                image: "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80",
+                icon: "💥"
+            },
+            {
+                name: "Colt",
+                rarity: "Raro",
+                rarityClass: "bg-green-500",
+                class: "Atirador",
+                hp: "2800",
+                damage: "3600",
+                speed: "Normal",
+                image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80",
+                icon: "🔫"
+            },
+            {
+                name: "El Primo",
+                rarity: "Raro",
+                rarityClass: "bg-green-500",
+                class: "Tanque",
+                hp: "6000",
+                damage: "2400",
+                speed: "Rápida",
+                image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=400&q=80",
+                icon: "🥊"
+            },
+            {
+                name: "Rico",
+                rarity: "Super Raro",
+                rarityClass: "bg-blue-500",
+                class: "Atirador",
+                hp: "2800",
+                damage: "3200",
+                speed: "Normal",
+                image: "https://images.unsplash.com/photo-1614680376593-902f749f7edc?auto=format&fit=crop&w=400&q=80",
+                icon: "🤖"
+            },
+            {
+                name: "Piper",
+                rarity: "Épico",
+                rarityClass: "bg-purple-600",
+                class: "Atiradora",
+                hp: "2400",
+                damage: "3400",
+                speed: "Normal",
+                image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80",
+                icon: "☂️"
+            },
+            {
+                name: "Mortis",
+                rarity: "Mítico",
+                rarityClass: "bg-red-500",
+                class: "Assassin",
+                hp: "3800",
+                damage: "1800",
+                speed: "Muito Rápida",
+                image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=400&q=80",
+                icon: "🦇"
+            },
+            {
+                name: "Spike",
+                rarity: "Lendário",
+                rarityClass: "bg-yellow-400 text-black",
+                class: "Destruidor",
+                hp: "2400",
+                damage: "3100",
+                speed: "Normal",
+                image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80",
+                icon: "🌵"
+            },
+            {
+                name: "Crow",
+                rarity: "Lendário",
+                rarityClass: "bg-yellow-400 text-black",
+                class: "Assassino Tóxico",
+                hp: "2400",
+                damage: "1600",
+                speed: "Muito Rápida",
+                image: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=400&q=80",
+                icon: "🦅"
+            }
+        ];
+
+        // Render Cards Function
+        function renderBrawlers(filter = 'all') {
+            const grid = document.getElementById('brawlers-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? brawlers 
+                : brawlers.filter(b => b.rarity.toLowerCase() === filter.toLowerCase());
+
+            filtered.forEach(brawler => {
+                const card = document.createElement('div');
+                card.className = "bg-slate-800 rounded-2xl comic-border shadow-comic overflow-hidden group hover:translate-y-[-6px] transition-all duration-300 flex flex-col justify-between";
+                
+                card.innerHTML = `
+                    <div>
+                        <!-- Brawler Image Box -->
+                        <div class="relative h-48 bg-slate-900 overflow-hidden border-b-4 border-black">
+                            <img src="${brawler.image}" alt="${brawler.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <!-- Rarity Badge -->
+                            <span class="absolute top-3 left-3 ${brawler.rarityClass} font-brawl text-xs px-3 py-1 rounded-xl comic-border uppercase shadow-comic">
+                                ${brawler.rarity}
+                            </span>
+                            <!-- Icon -->
+                            <span class="absolute bottom-2 right-2 text-2xl bg-black/60 p-1.5 rounded-xl border border-white/20 backdrop-blur-sm">
+                                ${brawler.icon}
+                            </span>
+                        </div>
+
+                        <!-- Info Content -->
+                        <div class="p-5 space-y-4">
+                            <div>
+                                <h3 class="font-brawl text-2xl text-brawlYellow tracking-wide">${brawler.name}</h3>
+                                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">${brawler.class}</p>
+                            </div>
+
+                            <!-- Stats -->
+                            <div class="space-y-2 pt-2 border-t border-slate-700/60">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-gray-400 font-semibold"><i class="fa-solid fa-heart text-red-500 mr-1.5"></i>Saúde:</span>
+                                    <span class="font-brawl text-white">${brawler.hp}</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-gray-400 font-semibold"><i class="fa-solid fa-bolt text-yellow-400 mr-1.5"></i>Ataque:</span>
+                                    <span class="font-brawl text-white">${brawler.damage}</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-gray-400 font-semibold"><i class="fa-solid fa-gauge-high text-blue-400 mr-1.5"></i>Velocidade:</span>
+                                    <span class="font-brawl text-white">${brawler.speed}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action inside Card -->
+                    <div class="p-4 pt-0">
+                        <button onclick="showBrawlerDetail('${brawler.name}', '${brawler.class}', '${brawler.rarity}')" class="w-full bg-brawlBlue hover:bg-brawlBlueDark text-white font-brawl py-2 rounded-xl comic-border shadow-comic text-sm transition-colors">
+                            VER DETALHES
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Handlers
+        document.querySelectorAll('#filter-buttons .filter-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                document.querySelectorAll('#filter-buttons .filter-btn').forEach(btn => {
+                    btn.classList.remove('ring-4', 'ring-white');
+                });
+                e.target.classList.add('ring-4', 'ring-white');
+                
+                const filter = e.target.getAttribute('data-filter');
+                renderBrawlers(filter);
+            });
+        });
+
+        // Modal Logic
+        function openPassModal() {
+            document.getElementById('info-modal').classList.remove('hidden');
+        }
+
+        function closePassModal() {
+            document.getElementById('info-modal').classList.add('hidden');
+        }
+
+        function showBrawlerDetail(name, bClass, rarity) {
+            document.getElementById('modal-title').innerText = `${name.toUpperCase()}`;
+            document.getElementById('modal-content').innerText = `${name} é um Brawler da classe ${bClass} com raridade ${rarity}. Domine o campo de batalha combinando o seu Super ataque e Acessórios com os seus aliados de equipe!`;
+            openPassModal();
+        }
+
+        // Initialize Render
+        window.onload = function() {
+            renderBrawlers();
+        };
+    </script>
+</body>
+</html>
